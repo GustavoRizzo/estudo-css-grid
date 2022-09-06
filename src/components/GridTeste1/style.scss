@@ -1,0 +1,35 @@
+main {
+    width: 100%;
+    display: grid;
+    grid-template: 
+        "topbar topbar  topbar"
+        "ads    content sidebar"
+        "footer footer  footer";
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 50px auto 70px;
+}
+
+header {
+    background-color: #FE5AC7;
+    grid-area: topbar;
+}
+
+article {
+    background-color: #FDBB60;
+    grid-area: content;
+}
+
+aside {
+    grid-area: ads;
+    background-color: #9081FE;
+}
+
+nav {
+    grid-area: sidebar;
+    background-color: #CAF55B;
+}
+
+footer{
+    grid-area: footer;
+    background-color: #6F61DB;
+}
