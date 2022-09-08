@@ -1,25 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
-import GridTeste1 from './components/GridTeste1/GridTeste1'
+import { Routes, Route, Link } from "react-router-dom";
+import Navbar from './components/Navbar/Navbar';
+import Example2 from './pages/Example2';
+import Example1 from './pages/Example1';
+import Home from './pages/Home';
+
+
 
 function App() {
-
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
+    <>
+      <Navbar />
+      <div className='container'>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="example1" element={<Example1 />} />
+          <Route path="example2" element={<Example2 />} />          
 
-      <GridTeste1></GridTeste1>
-      
-    </div>
+          <Route
+            path="*"
+            element={
+              <main style={{ padding: "1rem" }}>
+                <p>There's nothing here!</p>
+              </main>
+            }
+          />
+
+        </Routes>      
+      </div>
+    </>
   )
 }
 

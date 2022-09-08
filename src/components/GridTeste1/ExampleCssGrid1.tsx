@@ -1,6 +1,6 @@
 import './style.scss'
 
-export default function GridTeste1() {
+export default function ExampleCssGrid1() {
     return (
         <main>
             <header>Header</header>
