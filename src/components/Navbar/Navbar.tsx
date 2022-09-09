@@ -4,11 +4,13 @@ import './style.scss'
 
 export default function Navbar() {
     return (
-        <nav className="nav">
-            <Link to="/" className="site-title">Estudo CSS Grid</Link>
-            <ul>
+        <nav className="navbar">
+            <Link to="/" className="navbar__title">Estudo CSS Grid</Link>
+            <ul className="navbar__options">
                 <CustomLink to="/example1">Example 1</CustomLink>
                 <CustomLink to="/example2">Example 2</CustomLink>
+
+                <CustomLink to="/example3">Example 33333333333333333333333</CustomLink>
             </ul>
         </nav>
     );
@@ -25,8 +27,8 @@ function CustomLink({ to, children, ...props }:CustumLinkProps) {
     const isActive = useMatch({path: resolvedPath.pathname, end: true});
 
     return(
-        <li className={isActive? "active" : ""}>
-            <Link to={to} {...props}>
+        <li className={"navbar__options__option" + (isActive? " navbar__options__option--active" : "")}>
+            <Link to={to} {...props} className="navbar__options__option__link">
                 {children}
             </Link>
         </li>
