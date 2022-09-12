@@ -23,32 +23,32 @@ $proportion: 95%;
     &__header {
         background-color: $header-color;
         grid-area: topbar;
-        background: linear-gradient($angle, $header-color, $proportion, $background-color);
+        //background: linear-gradient($angle, $header-color, $proportion, $background-color);
     }
 
     &__author {
         grid-area: ads;
         background-color: $author-color;        
-        background: linear-gradient($angle, $author-color, $proportion, $background-color);
+        //background: linear-gradient($angle, $author-color, $proportion, $background-color);
     }
 
     &__article {        
         grid-area: content;
         min-height: 300px;
         background-color: $article-color;
-        background: linear-gradient($angle, $article-color, $proportion, $background-color);
+        //background: linear-gradient($angle, $article-color, $proportion, $background-color);
     }
 
     &__sidebar{
         grid-area: sidebar;
         background-color: $sidebar-color;        
-        background: linear-gradient($angle, $sidebar-color, $proportion, $background-color);
+        //background: linear-gradient($angle, $sidebar-color, $proportion, $background-color);
     }
 
     &__footer{
         grid-area: footer;
         background-color: $footer-color;
-        background: linear-gradient($angle, $footer-color, $proportion, $background-color);
+        //background: linear-gradient($angle, $footer-color, $proportion, $background-color);
     }
 
     &--section {
@@ -57,6 +57,5 @@ $proportion: 95%;
         align-items: center;
         justify-content: center;
         border-radius: 5px;
-        //background-image: linear-gradient(15 deg, red, 20% , yellow);
     }
 }
