@@ -1,4 +1,15 @@
-main {
+$header-color:#FE5AC7;
+$footer-color: #6F61DB;
+$article-color: #FDBB60;
+$author-color: #9081FE;
+$sidebar-color: #CAF55B;
+
+$background-color: #555759;
+$angle: 135deg;
+$proportion: 95%;
+
+
+.pageGrid {
     width: 100%;
     display: grid;
     grid-template: 
@@ -7,29 +18,45 @@ main {
         "footer footer  footer";
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 50px auto 70px;
-}
+    gap: 10px;
 
-header {
-    background-color: #FE5AC7;
-    grid-area: topbar;
-}
+    &__header {
+        background-color: $header-color;
+        grid-area: topbar;
+        background: linear-gradient($angle, $header-color, $proportion, $background-color);
+    }
 
-article {
-    background-color: #FDBB60;
-    grid-area: content;
-}
+    &__author {
+        grid-area: ads;
+        background-color: $author-color;        
+        background: linear-gradient($angle, $author-color, $proportion, $background-color);
+    }
 
-aside {
-    grid-area: ads;
-    background-color: #9081FE;
-}
+    &__article {        
+        grid-area: content;
+        min-height: 300px;
+        background-color: $article-color;
+        background: linear-gradient($angle, $article-color, $proportion, $background-color);
+    }
 
-nav {
-    grid-area: sidebar;
-    background-color: #CAF55B;
-}
+    &__sidebar{
+        grid-area: sidebar;
+        background-color: $sidebar-color;        
+        background: linear-gradient($angle, $sidebar-color, $proportion, $background-color);
+    }
 
-footer{
-    grid-area: footer;
-    background-color: #6F61DB;
+    &__footer{
+        grid-area: footer;
+        background-color: $footer-color;
+        background: linear-gradient($angle, $footer-color, $proportion, $background-color);
+    }
+
+    &--section {
+        font-size: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        //background-image: linear-gradient(15 deg, red, 20% , yellow);
+    }
 }
