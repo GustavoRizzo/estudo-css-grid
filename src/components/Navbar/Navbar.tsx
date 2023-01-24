@@ -9,7 +9,7 @@ export default function Navbar() {
             <ul className="navbar__options">
                 <CustomLink to="/example1">Example 1</CustomLink>
                 <CustomLink to="/example2">Example 2</CustomLink>
-                <CustomLink to="/Listexpertise">List Expertise</CustomLink>
+                <CustomLink to="/ListExpertises">List Expertise</CustomLink>
 
                 <CustomLink to="/example3">Example 33333333333333333333333</CustomLink>
             </ul>
